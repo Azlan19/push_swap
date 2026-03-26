@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/03/26 16:16:23 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/03/26 16:26:52 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,14 @@
             // If so, implement our Turk Algorithm
 
 // Clean up the stack
+
+
+// BASIC UTILS
+// - Functions to handle errors
+// - Operations (sa, sb, ss etc.)
+// - Get stack length
+// - Get last node
+// - Get Min & Max nodes
 
 
 #include <stdio.h>
