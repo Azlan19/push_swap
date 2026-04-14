@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 15:04:50 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 15:16:08 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_stack
 }					t_stack;
 
 void list_numbers(char **argv);
+long ft_atol(const char *str);
 
 
 
