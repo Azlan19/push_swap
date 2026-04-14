@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 18:47:58 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 18:57:08 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,9 @@ void swap(t_stack** stack);
 void sa(t_stack** a);
 void sb(t_stack** b);
 void ss(t_stack** a, t_stack** b);
-void push(t_stack** src, t_stack** dest);
 
+void push(t_stack** src, t_stack** dest);
+void pa(t_stack** a, t_stack** b);
+void pb(t_stack** a, t_stack** b);
 
 #endif

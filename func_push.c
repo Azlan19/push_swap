@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 18:30:36 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 18:52:08 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 18:56:43 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,14 @@ void push(t_stack** src, t_stack** dest)
     if (*dest)
         (*dest)->prev = node;
     *dest = node;
+}
+
+void pa(t_stack** a, t_stack** b)
+{
+    push(b, a);
+}
+
+void pb(t_stack** a, t_stack** b)
+{
+    push(a, b);
 }
