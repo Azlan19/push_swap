@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 19:08:22 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 19:15:29 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,19 @@ int main(int argc, char **argv)
     }
 
     
-    printf("\na\n");
     display(a);
-    display(a);
-    
-    
-    printf("\nb\n");
     display(b);
+    
+    printf("\n");
+    pb(&a, &b);
+    pb(&a, &b);
+    ss(&a, &b);
+    pb(&a, &b);
+    pb(&a, &b);
+    
+    display(a);
+    display(b);
+    
 
     
     return(0);
