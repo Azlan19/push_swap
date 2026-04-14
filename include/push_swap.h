@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 18:01:42 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 18:21:38 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ void append_node(t_stack** stack, int num);
 t_stack *find_last(t_stack* head);
 
 void swap(t_stack** stack);
-
+void sa(t_stack** a);
+void sb(t_stack** b);
+void ss(t_stack** a, t_stack** b);
 
 
 #endif

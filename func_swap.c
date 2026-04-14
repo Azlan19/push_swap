@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:55:55 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 18:14:36 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 18:20:29 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,20 @@ void swap(t_stack** stack)
     second->prev = NULL;
     *stack = second;
     
+}
+
+void sa(t_stack** a)
+{
+    swap(a);
+}
+
+void sb(t_stack** b)
+{
+    swap(b);
+}
+
+void ss(t_stack** a, t_stack** b)
+{
+    swap(a);
+    swap(b);
 }
