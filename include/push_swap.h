@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/03/26 16:48:19 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 11:18:51 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@
 # include <limits.h>
 # include <stdbool.h>
 
-typedef struct s_stack_node
+typedef struct s_stack
 {
-	int					value;
-	int					index;
-	int					push_cost;
-	bool				above_median;
-	bool				cheapest;
+	int				value;
+	int				index;
+	int				push_cost;
+	bool			above_median;
+	bool			cheapest;
 
-	struct s_stack_node	*target_node;
-	struct s_stack_node	*next;
-	struct s_stack_node	*prev;
-}						t_stack_node;
+	struct s_stack	*target_node;
+	struct s_stack	*next;
+	struct s_stack	*prev;
+}					t_stack_node;
 
 #endif
