@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 11:22:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 15:17:39 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 15:34:32 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,16 @@ long ft_atol(const char *str)
 
 
 
-void list_numbers(char **argv)
+void create_stack(t_stack* a, char **argv)
 {
     int i;
+    long num;
 
     i = 0;
     while (argv[i])
     {
-        printf("%s\n", argv[i]);
+        num = ft_atol(argv[i]);
+        printf("%ld\n", num);
         i++;
     }
 }

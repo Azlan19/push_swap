@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 15:05:46 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 15:32:07 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,18 +64,16 @@
 
 int main(int argc, char **argv)
 {
+    t_stack* a;
+    t_stack* b;
 
-    list_numbers(argv);
-
-    return(0);
-    // int i;
-
-    // printf("argc = %d\n", argc);
+    a = NULL;
+    b = NULL;
     
-    // i = 0;
-    // while(i < argc)
-    // {
-    //     printf("argv[%d] = %s\n", i, argv[i]);
-    //     i++;
-    // }
+
+
+
+    
+    list_numbers(argv);
+    return(0);
 }
