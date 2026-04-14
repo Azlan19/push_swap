@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 16:13:42 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 17:07:02 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,35 @@ int main(int argc, char **argv)
 
     a = NULL;
     b = NULL;
+    if (argc == 1 || (argc == 2 && !argv[1][0]))
+    {
+        printf("argc == %d\n", argc);
+        printf("I failed\n");
+        return 1;
+    }
+    else if (argc == 2)
+    {
+        printf("I need ft_split\n");
+        return 1;
+        
+    }
+    else
+    {
+        create_stack(&a, argv + 1);        
+    }
     
+    int	i;
 
+	i = 0;
+	while (a)
+	{
+        printf("I'm here\n");
+        printf("%d\n", a->value);
+		a = a->next;
+		i++;
+	}
 
 
     
-    create_stack(a, argv);
     return(0);
 }

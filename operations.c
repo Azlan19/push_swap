@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 11:22:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 15:34:32 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 17:06:12 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,7 @@ long ft_atol(const char *str)
     
 }
 
-
-
-void create_stack(t_stack* a, char **argv)
+void create_stack(t_stack** a, char **argv)
 {
     int i;
     long num;
@@ -50,20 +48,29 @@ void create_stack(t_stack* a, char **argv)
     while (argv[i])
     {
         num = ft_atol(argv[i]);
-        printf("%ld\n", num);
+        append_node(a, num);
         i++;
     }
 }
 
 
+void append_node(t_stack** stack, int num)
+{
+    t_stack* new_node;
+    t_stack* last_node;
+    
+    new_node = malloc(sizeof(t_stack));
+    if(!new_node)
+        return ;
+    new_node->value = num;
+    new_node->next = NULL;
+    if (*stack == NULL)
+    {
+        *stack = new_node;
+        return ;
+    }
 
-// int main()
-// {
-//     t_stack* node = malloc(sizeof(node));
-//     node->value = 5;
-//     node->index = 1;
-//     printf("%d\n", node->value);
-//     printf("%d\n", node->index);
-//     free(node);
-//     return 0;
-// }
+    last_node = find_last(*stack);
+    last_node->next = new_node;
+    new_node->prev = last_node;
+}
