@@ -6,11 +6,38 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 11:22:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 15:07:11 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 15:17:39 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
+
+long ft_atol(const char *str)
+{
+    long num;
+    int sign;
+    int i;
+
+    i = 0;
+	while (str[i] == '\f' || str[i] == '\n' || str[i] == '\r' || str[i] == '\t' || str[i] == '\v'
+		|| str[i] == ' ')
+		i++;
+    sign = 1;
+    if ((str[i] == '+' || str[i] == '-'))
+    {
+        if (str[i] == '-')
+            sign = -sign;
+        i++;
+    }
+    num = 0;
+    while ('0' <= str[i] && str[i] <= '9')
+    {
+        num = (num * 10) + (str[i] - '0');
+        i++;
+    }
+    return (num * sign);
+    
+}
 
 
 
