@@ -6,17 +6,25 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 18:30:36 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 18:33:21 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 18:52:08 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "include/push_swap.h"
 
-void push(t_stack** a, t_stack** b)
+void push(t_stack** src, t_stack** dest)
 {
-    t_stack* first;
-    t_stack* second;
+    t_stack* node;
 
-    first = *a;
-    first->value    
+    node = *src;
+    *src = node->next;
+    if (*src)
+        (*src)->prev = NULL;
+    
+    node->prev = NULL;
+    
+    node->next = *dest;
+    if (*dest)
+        (*dest)->prev = node;
+    *dest = node;
 }
