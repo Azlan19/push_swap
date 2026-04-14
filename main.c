@@ -6,11 +6,25 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 17:07:02 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/14 19:08:22 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
+
+void    display(t_stack *head)
+{
+    t_stack  *current;
+
+    current = head;
+    while (current != NULL)
+    {
+        printf("%d -> ", current->value);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+
 
 int main(int argc, char **argv)
 {
@@ -35,18 +49,15 @@ int main(int argc, char **argv)
     {
         create_stack(&a, argv + 1);        
     }
+
     
-    int	i;
-
-	i = 0;
-	while (a)
-	{
-        printf("I'm here\n");
-        printf("%d\n", a->value);
-		a = a->next;
-		i++;
-	}
-
+    printf("\na\n");
+    display(a);
+    display(a);
+    
+    
+    printf("\nb\n");
+    display(b);
 
     
     return(0);
