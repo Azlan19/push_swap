@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/15 11:36:56 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/15 11:57:07 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,8 @@ void pa(t_stack** a, t_stack** b);
 void pb(t_stack** a, t_stack** b);
 
 void rotate(t_stack** stack);
-	
+void ra(t_stack** a);
+void rb(t_stack** b);
+void rr(t_stack** a, t_stack** b);
+
 #endif
