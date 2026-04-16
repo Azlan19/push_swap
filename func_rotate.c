@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 11:26:00 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/16 13:10:19 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 00:15:18 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,19 @@
 
 void rotate(t_stack** stack)
 {
-    int first_node;
-    t_stack* second;
+    t_stack* first;
+    t_stack* last;
 
-    first_node = (*stack)->value;
-    
-    second = (*stack)->next;
-    *stack = second;
-    append_node(stack, first_node);
+    first = *stack;
+    last = find_last(*stack);
+
+    *stack = first->next;
+    first->next->prev = NULL;
+
+    last->next = first;
+    first->prev = last;
+
+    first->next = NULL;
 }
 
 void ra(t_stack** a)
