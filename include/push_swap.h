@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/15 12:09:02 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/16 13:12:35 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,15 @@ typedef struct s_stack
 	int				push_cost;
 	bool			above_median;
 	bool			cheapest;
-
+	
 	struct s_stack	*target_node;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }					t_stack;
+
+
+//Temporary
+void    display(t_stack *head);
 
 void create_stack(t_stack** a, char **argv);
 long ft_atol(const char *str);
@@ -49,5 +53,7 @@ void rotate(t_stack** stack);
 void ra(t_stack** a);
 void rb(t_stack** b);
 void rr(t_stack** a, t_stack** b);
+
+void revrotate(t_stack** stack);
 
 #endif
