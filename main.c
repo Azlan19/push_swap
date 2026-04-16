@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/15 14:38:46 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 00:36:42 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,19 @@ int main(int argc, char **argv)
         create_stack(&a, argv + 1);        
     }
 
-    display(a);
-    
-    ra(&a);
-    ra(&a);
-    ra(&a);
-    ra(&a);
+    printf("\n");
     
     display(a);
+    display(b);
+    printf("\n");
+
+    printf("stack_len = %d\n", stack_len(a));
+    printf("\n");
+    
+    display(a);
+    display(b);
+    printf("\n");
+    
     
 
     
