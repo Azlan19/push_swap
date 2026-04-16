@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 18:30:36 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/14 18:56:43 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 00:02:05 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ void push(t_stack** src, t_stack** dest)
     *src = node->next;
     if (*src)
         (*src)->prev = NULL;
-    
-    node->prev = NULL;
-    
+
     node->next = *dest;
     if (*dest)
         (*dest)->prev = node;
+    
+    node->prev = NULL;
+    
     *dest = node;
 }
 
