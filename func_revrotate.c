@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 14:41:02 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/16 13:26:30 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 00:23:40 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,21 @@
 void revrotate(t_stack** stack)
 {
     t_stack* first;
-    t_stack* last_node;
+    t_stack* last;
 
     first = *stack;
-    last_node = find_last(first);
+    last = find_last(first);
 
-    last_node->prev->next = NULL;
-    last_node->next = first;
-    first->prev = last_node;
-    *stack = last_node;
+    last->next = first;
+    first->prev = last;
+
+    last->prev->next = NULL;
+    last->prev = NULL;
+
+    *stack = last;
+
+
+    
 }
 
 void rra(t_stack** a)
