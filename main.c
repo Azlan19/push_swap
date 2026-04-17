@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/17 00:36:42 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 12:12:50 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,32 @@ int main(int argc, char **argv)
     display(b);
     printf("\n");
 
-    printf("stack_len = %d\n", stack_len(a));
-    printf("\n");
+    pb(&a, &b);
+    pb(&a, &b);
+    pb(&a, &b);
     
     display(a);
     display(b);
     printf("\n");
+
+    sa(&a);
+    
+    display(a);
+    display(b);
+    printf("\n");
+    
+    rrr(&a, &b);
+    
+    display(a);
+    display(b);
+    printf("\n");
+    
+    rb(&b);
+    
+    display(a);
+    display(b);
+    printf("\n");
+    
     
     
 
