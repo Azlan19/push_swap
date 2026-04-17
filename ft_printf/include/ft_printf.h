@@ -6,14 +6,13 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 12:58:13 by oazlan            #+#    #+#             */
-/*   Updated: 2026/03/26 16:41:22 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 12:32:21 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "libft.h"
 # include <stdarg.h>
 # include <unistd.h>
 

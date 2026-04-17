@@ -6,11 +6,11 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 17:53:16 by oazlan            #+#    #+#             */
-/*   Updated: 2026/01/17 19:34:41 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 12:37:07 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 #ifdef __APPLE__
 # define NULL_PTR "0x0"

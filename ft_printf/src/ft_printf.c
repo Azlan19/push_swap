@@ -6,12 +6,11 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 19:47:20 by oazlan            #+#    #+#             */
-/*   Updated: 2026/01/18 12:00:55 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 12:34:30 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	format_checker(char fmt_spec, va_list *ap)
 {

@@ -6,11 +6,11 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/31 15:17:52 by oazlan            #+#    #+#             */
-/*   Updated: 2025/12/31 15:29:08 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 12:37:11 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	ft_intlen(int num)
 {
