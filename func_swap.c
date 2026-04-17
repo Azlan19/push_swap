@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:55:55 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/16 23:51:52 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 11:50:04 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@ void swap(t_stack** stack)
     t_stack* first;
     t_stack* second;
 
+    if (!stack || !*stack || !(*stack)->next)
+        return;
+    
     first = *stack;
     second = first->next;
     
     first->next = second->next;
-    second->next->prev = first;
+    if (second->next)
+        second->next->prev = first;
     
     second->next = first;
     first->prev = second;

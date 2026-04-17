@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 14:41:02 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/17 00:23:40 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 11:55:41 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ void revrotate(t_stack** stack)
 {
     t_stack* first;
     t_stack* last;
+
+    if (!stack || !*stack || !(*stack)->next)
+    return ;
 
     first = *stack;
     last = find_last(first);
