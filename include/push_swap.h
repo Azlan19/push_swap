@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/17 00:36:09 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 12:36:03 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <limits.h>
 # include <stdbool.h>
 # include <stdio.h>
+# include <stdlib.h>
 
 typedef struct s_stack
 {
