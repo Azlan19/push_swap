@@ -6,11 +6,12 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 18:30:36 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/17 11:53:41 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 12:26:17 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "include/push_swap.h"
+
 
 void push(t_stack** src, t_stack** dest)
 {
@@ -36,9 +37,11 @@ void push(t_stack** src, t_stack** dest)
 void pa(t_stack** a, t_stack** b)
 {
     push(b, a);
+    ft_printf("pa\n");
 }
 
 void pb(t_stack** a, t_stack** b)
 {
     push(a, b);
+    ft_printf("pb\n");
 }

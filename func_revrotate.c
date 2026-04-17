@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 14:41:02 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/17 11:55:41 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/17 12:44:20 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,18 @@ void revrotate(t_stack** stack)
 void rra(t_stack** a)
 {
     revrotate(a);
+    ft_printf("rra\n");
 }
 
 void rrb(t_stack** b)
 {
     revrotate(b);
+    ft_printf("rrb\n");
 }
 
 void rrr(t_stack** a, t_stack** b)
 {
     revrotate(a);
     revrotate(b);
+    ft_printf("rrr\n");
 }
