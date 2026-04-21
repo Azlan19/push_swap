@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/17 12:12:50 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/21 15:18:16 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,8 @@ int main(int argc, char **argv)
     
     
     
-
+    free(a);
+    free(b);
     
     return(0);
 }
