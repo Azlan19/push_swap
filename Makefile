@@ -16,6 +16,7 @@ SRCS		= 	main.c				\
 				func_swap.c			\
 				operations.c		\
 				utils.c				\
+				ft_split.c 			\
 
 OBJS_DIR	= obj
 OBJS		= $(SRCS:%.c=$(OBJS_DIR)/%.o)
