@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/21 15:18:16 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/22 13:04:31 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,8 @@ int main(int argc, char **argv)
     }
     else if (argc == 2)
     {
-        printf("I need ft_split\n");
-        return 1;
-        
+        argv = ft_split(argv[1], ' ');
+        create_stack(&a, argv);        
     }
     else
     {
