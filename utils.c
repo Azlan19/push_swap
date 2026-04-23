@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:49:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/17 00:37:11 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/23 17:46:35 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ t_stack *find_last(t_stack* head)
 int stack_len(t_stack* stack)
 {
     int i;
-
+    
     i = 0;
     while (stack)
     {
@@ -40,4 +40,19 @@ int stack_len(t_stack* stack)
     }
     
     return i;
+}
+
+t_stack *find_max(t_stack* stack)
+{
+    t_stack* max;
+    max = stack;
+    while (stack->next)
+    {
+        if(max->value < stack->next->value)
+        {
+            max = stack->next;
+        }
+        stack = stack->next;
+    }
+    return max;
 }
