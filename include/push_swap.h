@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/23 16:57:00 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/23 17:24:04 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void append_node(t_stack** stack, int num);
 //Utils
 t_stack *find_last(t_stack* head);
 int stack_len(t_stack* stack);
+t_stack *find_max(t_stack* stack);
 
 
 //Commands
@@ -70,5 +71,8 @@ char	**ft_split(char const *s, char c);
 
 //Stack sorted
 bool stack_sorted(t_stack* stack);
+
+//sort three
+void sort_three(t_stack** stack);
 
 #endif

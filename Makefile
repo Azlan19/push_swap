@@ -18,6 +18,7 @@ SRCS		= 	main.c				\
 				utils.c				\
 				ft_split.c 			\
 				stack_sorted.c 		\
+				sort_three.c 		\
 
 OBJS_DIR	= obj
 OBJS		= $(SRCS:%.c=$(OBJS_DIR)/%.o)
