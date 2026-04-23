@@ -6,24 +6,21 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:28:06 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/23 16:40:27 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/23 16:56:53 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
 
-bool stack_sorted(t_stack* a)
+bool stack_sorted(t_stack* stack)
 {
-    t_stack *current;
-
-    current = a;
-    while (current->next != NULL)
+    while (stack->next != NULL)
     {
-        if (current->value > current->next->value)
+        if (stack->value > stack->next->value)
         {
             return(false);
         }
-        current = current->next;
+        stack = stack->next;
     }
     return(true);
     
