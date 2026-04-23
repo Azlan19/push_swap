@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/22 13:04:31 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/23 16:36:48 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ int main(int argc, char **argv)
     b = NULL;
     if (argc == 1 || (argc == 2 && !argv[1][0]))
     {
-        printf("argc == %d\n", argc);
-        printf("I failed\n");
         return 1;
     }
     else if (argc == 2)
@@ -55,32 +53,7 @@ int main(int argc, char **argv)
     display(b);
     printf("\n");
 
-    pb(&a, &b);
-    pb(&a, &b);
-    pb(&a, &b);
-    
-    display(a);
-    display(b);
-    printf("\n");
-
-    sa(&a);
-    
-    display(a);
-    display(b);
-    printf("\n");
-    
-    rrr(&a, &b);
-    
-    display(a);
-    display(b);
-    printf("\n");
-    
-    rb(&b);
-    
-    display(a);
-    display(b);
-    printf("\n");
-    
+    printf ("sorted = %d\n", stack_sorted(a));
     
     
     free(a);
