@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/23 17:24:04 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/23 19:48:23 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,10 @@ bool stack_sorted(t_stack* stack);
 
 //sort three
 void sort_three(t_stack** stack);
+
+//error.c
+bool error_syntax(char *str);
+void	free_stack(t_stack **stack);
+bool error_duplicate(t_stack* stack, int num);
 
 #endif
