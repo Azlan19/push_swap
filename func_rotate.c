@@ -6,13 +6,13 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 11:26:00 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 14:29:43 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 14:54:24 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "include/push_swap.h"
 
-static void rotate(t_stack** stack)
+static void rotate(t_stack **stack)
 {
     t_stack* first;
     t_stack* last;
@@ -32,19 +32,19 @@ static void rotate(t_stack** stack)
     first->next = NULL;
 }
 
-void ra(t_stack** a)
+void ra(t_stack **a)
 {
     rotate(a);
     ft_printf("ra\n");
 }
 
-void rb(t_stack** b)
+void rb(t_stack **b)
 {
     rotate(b);
     ft_printf("rb\n");
 }
 
-void rr(t_stack** a, t_stack** b)
+void rr(t_stack **a, t_stack **b)
 {
     rotate(a);
     rotate(b);

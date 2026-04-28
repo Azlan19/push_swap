@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 11:22:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/23 19:49:48 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 14:54:52 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ long ft_atol(const char *str)
     
 }
 
-void create_stack(t_stack** a, char **argv)
+void create_stack(t_stack **a, char **argv)
 {
     int i;
     long num;
@@ -66,7 +66,7 @@ void create_stack(t_stack** a, char **argv)
 }
 
 
-void append_node(t_stack** stack, int num)
+void append_node(t_stack **stack, int num)
 {
     t_stack* new_node;
     t_stack* last_node;

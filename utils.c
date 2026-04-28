@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:49:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/23 17:46:35 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 14:55:34 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 // - Get last node
 // - Get Min & Max nodes
 
-t_stack *find_last(t_stack* head)
+t_stack *find_last(t_stack *head)
 {
     while (head->next)
     {
@@ -28,7 +28,7 @@ t_stack *find_last(t_stack* head)
     return head;
 }
 
-int stack_len(t_stack* stack)
+int stack_len(t_stack *stack)
 {
     int i;
     
@@ -42,7 +42,7 @@ int stack_len(t_stack* stack)
     return i;
 }
 
-t_stack *find_max(t_stack* stack)
+t_stack *find_max(t_stack *stack)
 {
     t_stack* max;
     max = stack;

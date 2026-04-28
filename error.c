@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 19:21:58 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/23 19:48:12 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 14:53:14 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	free_stack(t_stack **stack)
 	*stack = NULL;
 }
 
-bool error_duplicate(t_stack* stack, int num)
+bool error_duplicate(t_stack *stack, int num)
 {
     if(stack == NULL)
     {
