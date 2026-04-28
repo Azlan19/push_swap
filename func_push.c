@@ -6,14 +6,14 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 18:30:36 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/17 12:26:17 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 14:28:35 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "include/push_swap.h"
 
 
-void push(t_stack** src, t_stack** dest)
+static void push(t_stack** src, t_stack** dest)
 {
     t_stack* node;
 

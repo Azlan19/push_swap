@@ -6,13 +6,13 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 11:26:00 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/17 12:44:37 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 14:29:43 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "include/push_swap.h"
 
-void rotate(t_stack** stack)
+static void rotate(t_stack** stack)
 {
     t_stack* first;
     t_stack* last;

@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/23 19:48:23 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 14:29:32 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,21 +47,21 @@ t_stack *find_max(t_stack* stack);
 
 
 //Commands
-void swap(t_stack** stack);
+// void swap(t_stack** stack);
 void sa(t_stack** a);
 void sb(t_stack** b);
 void ss(t_stack** a, t_stack** b);
 
-void push(t_stack** src, t_stack** dest);
+// void push(t_stack** src, t_stack** dest);
 void pa(t_stack** a, t_stack** b);
 void pb(t_stack** a, t_stack** b);
 
-void rotate(t_stack** stack);
+// void rotate(t_stack** stack);
 void ra(t_stack** a);
 void rb(t_stack** b);
 void rr(t_stack** a, t_stack** b);
 
-void revrotate(t_stack** stack);
+// void revrotate(t_stack** stack);
 void rra(t_stack** a);
 void rrb(t_stack** b);
 void rrr(t_stack** a, t_stack** b);

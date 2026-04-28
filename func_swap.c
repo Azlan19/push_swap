@@ -6,13 +6,13 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:55:55 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/17 12:44:52 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 14:29:46 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "include/push_swap.h"
 
-void swap(t_stack** stack)
+static void swap(t_stack** stack)
 {
     t_stack* first;
     t_stack* second;
