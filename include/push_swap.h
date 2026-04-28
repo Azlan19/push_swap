@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 14:52:56 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 16:00:42 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ typedef struct s_stack
 //Temporary
 void    display(t_stack *head);
 
-void create_stack(t_stack **a, char **argv);
+void create_stack(t_stack **a, char **argv, bool is_string);
 long ft_atol(const char *str);
 void append_node(t_stack **stack, int num);
 
@@ -73,6 +73,8 @@ void sort_three(t_stack **stack);
 
 //error.c
 bool error_syntax(char *str);
+void fail_free(t_stack **a, char **argv, bool is_string);
+void free_argv(char **argv);
 void	free_stack(t_stack **stack);
 bool error_duplicate(t_stack *stack, int num);
 

@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 19:21:58 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 14:53:14 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 16:09:44 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,39 @@ bool error_syntax(char *str)
 {
     if (!(*str == '+' || *str == '-' || ('0' <= *str && *str <= '9')))
         return (false);
-    if ((*str == '+' || *str == '-') && !(str[1] >= '0' && str[1] <= '9'))
+    if ((*str == '+' || *str == '-') && !('0' <= str[1] && str[1] <= '9'))
         return (false);
     while (*++str)
     {
-        if (!(*str >= '0' && *str <= '9'))
+        if (!('0' <= *str && *str <= '9'))
             return (false);
     }
     return (true);
+}
+
+void fail_free(t_stack **a, char **argv, bool is_string)
+{
+    free_stack(a);
+    if(is_string)   
+        free_argv(argv);
+    write(2, "Error\n", 6);
+    exit(1);
+}
+
+void free_argv(char **argv)
+{
+    int i;
+
+    if (argv == NULL)
+        return ;
+    
+    i = 0;
+    while(argv[i])
+    {
+        free(argv[i]);
+        i++;
+    }
+    free(argv);
 }
 
 void	free_stack(t_stack **stack)

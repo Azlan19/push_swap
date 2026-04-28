@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 11:22:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 14:54:52 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 15:59:35 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ long ft_atol(const char *str)
     int i;
 
     i = 0;
-	while (str[i] == '\f' || str[i] == '\n' || str[i] == '\r' || str[i] == '\t' || str[i] == '\v'
-		|| str[i] == ' ')
+	while (str[i] == '\f' || str[i] == '\n' || str[i] == '\r' || str[i] == '\t'
+        || str[i] == '\v' || str[i] == ' ')
 		i++;
     sign = 1;
     if ((str[i] == '+' || str[i] == '-'))
@@ -39,7 +39,7 @@ long ft_atol(const char *str)
     
 }
 
-void create_stack(t_stack **a, char **argv)
+void create_stack(t_stack **a, char **argv, bool is_string)
 {
     int i;
     long num;
@@ -49,16 +49,16 @@ void create_stack(t_stack **a, char **argv)
     {
         if(!error_syntax(argv[i]))
         {
-            free_stack(a);
+            fail_free(a, argv, is_string);
         }
         num = ft_atol(argv[i]);
         if (num < INT_MIN || INT_MAX < num)
         {
-            free_stack(a);
+            fail_free(a, argv, is_string);
         }
         if(!error_duplicate(*a, (int)num))
         {
-            free_stack(a);
+            fail_free(a, argv, is_string);
         }
         append_node(a, num);
         i++;
