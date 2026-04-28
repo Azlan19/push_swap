@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 16:35:50 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 16:40:32 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,20 +35,31 @@ typedef struct s_stack
 
 //Temporary
 void    display(t_stack *head);
+//--------------------------------
 
-void create_stack(t_stack **a, char **argv, bool is_string);
-long ft_atol(const char *str);
-void append_node(t_stack **stack, int num);
+//ft_split.c
+char	**ft_split(char const *s, char c);
 
-//Utils
+//utils.c
 t_stack *find_last(t_stack *stack);
 int stack_len(t_stack *stack);
 t_stack *find_max(t_stack *stack);
 bool stack_sorted(t_stack *stack);
 void sort_three(t_stack **stack);
 
+//error.c
+bool error_syntax(char *str);
+void fail_free(t_stack **a, char **argv, bool is_string);
+void free_argv(char **argv);
+void	free_stack(t_stack **stack);
+bool error_duplicate(t_stack *stack, int num);
 
-//Commands
+//operations.c
+void create_stack(t_stack **a, char **argv, bool is_string);
+long ft_atol(const char *str);
+void append_node(t_stack **stack, int num);
+
+//func_*.c
 void sa(t_stack **a);
 void sb(t_stack **b);
 void ss(t_stack **a, t_stack **b);
@@ -63,16 +74,5 @@ void rr(t_stack **a, t_stack **b);
 void rra(t_stack **a);
 void rrb(t_stack **b);
 void rrr(t_stack **a, t_stack **b);
-
-//Split
-char	**ft_split(char const *s, char c);
-
-
-//error.c
-bool error_syntax(char *str);
-void fail_free(t_stack **a, char **argv, bool is_string);
-void free_argv(char **argv);
-void	free_stack(t_stack **stack);
-bool error_duplicate(t_stack *stack, int num);
 
 #endif
