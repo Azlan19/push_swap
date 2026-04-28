@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:49:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 14:55:34 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 16:32:30 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@
 // - Get last node
 // - Get Min & Max nodes
 
-t_stack *find_last(t_stack *head)
+t_stack *find_last(t_stack *stack)
 {
-    while (head->next)
+    while (stack->next)
     {
-        head = head->next;
+        stack = stack->next;
     }
-    return head;
+    return stack;
 }
 
 int stack_len(t_stack *stack)
@@ -55,4 +55,38 @@ t_stack *find_max(t_stack *stack)
         stack = stack->next;
     }
     return max;
+}
+
+bool stack_sorted(t_stack *stack)
+{
+    while (stack->next != NULL)
+    {
+        if (stack->value > stack->next->value)
+        {
+            return(false);
+        }
+        stack = stack->next;
+    }
+    return(true);
+    
+}
+
+void sort_three(t_stack **stack)
+{
+    t_stack* biggest_node;
+
+    biggest_node = find_max(*stack);
+
+    if (biggest_node == *stack)
+    {
+        ra(stack);
+    }
+    else if (biggest_node == (*stack)->next)
+    {
+        rra(stack);
+    }
+    if ((*stack)->value > (*stack)->next->value)
+    {
+        sa(stack);
+    }
 }

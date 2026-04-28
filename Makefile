@@ -17,8 +17,6 @@ SRCS		= 	main.c				\
 				operations.c		\
 				utils.c				\
 				ft_split.c 			\
-				stack_sorted.c 		\
-				sort_three.c 		\
 				error.c 			\
 
 OBJS_DIR	= obj

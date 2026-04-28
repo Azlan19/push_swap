@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 16:00:42 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 16:35:50 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,11 @@ long ft_atol(const char *str);
 void append_node(t_stack **stack, int num);
 
 //Utils
-t_stack *find_last(t_stack *head);
+t_stack *find_last(t_stack *stack);
 int stack_len(t_stack *stack);
 t_stack *find_max(t_stack *stack);
+bool stack_sorted(t_stack *stack);
+void sort_three(t_stack **stack);
 
 
 //Commands
@@ -65,11 +67,6 @@ void rrr(t_stack **a, t_stack **b);
 //Split
 char	**ft_split(char const *s, char c);
 
-//Stack sorted
-bool stack_sorted(t_stack *stack);
-
-//sort three
-void sort_three(t_stack **stack);
 
 //error.c
 bool error_syntax(char *str);
