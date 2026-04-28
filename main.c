@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/23 17:48:48 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/28 16:01:21 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ int main(int argc, char **argv)
     else if (argc == 2)
     {
         argv = ft_split(argv[1], ' ');
-        create_stack(&a, argv);        
+        create_stack(&a, argv, true);        
     }
     else
     {
-        create_stack(&a, argv + 1);        
+        create_stack(&a, argv + 1, false);        
     }
     if(!stack_sorted(a))
     {
