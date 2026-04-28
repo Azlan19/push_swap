@@ -18,6 +18,7 @@ SRCS		= 	main.c				\
 				utils.c				\
 				ft_split.c 			\
 				error.c 			\
+				algorithm.c 		\
 
 OBJS_DIR	= obj
 OBJS		= $(SRCS:%.c=$(OBJS_DIR)/%.o)
