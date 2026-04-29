@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 17:26:14 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 10:20:15 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,15 @@
 
 
 
-// void push_a_to_b(t_stack **a, t_stack **b)
-// {
+void push_a_to_b(t_stack **a, t_stack **b)
+{
+    while(stack_len(*a) > 3)
+    {
+        // printf("stack_len(a) = %d\n", stack_len(*a));
+        pb(a, b);
+        display(*a);
+        display(*b);
+        printf("\n");
+    }
     
-// }
+}
