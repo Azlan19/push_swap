@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 11:22:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 15:59:35 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 14:06:36 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,18 +48,12 @@ void create_stack(t_stack **a, char **argv, bool is_string)
     while (argv[i])
     {
         if(!error_syntax(argv[i]))
-        {
             fail_free(a, argv, is_string);
-        }
         num = ft_atol(argv[i]);
         if (num < INT_MIN || INT_MAX < num)
-        {
             fail_free(a, argv, is_string);
-        }
         if(!error_duplicate(*a, (int)num))
-        {
             fail_free(a, argv, is_string);
-        }
         append_node(a, num);
         i++;
     }
@@ -71,6 +65,8 @@ void append_node(t_stack **stack, int num)
     t_stack* new_node;
     t_stack* last_node;
     
+    if(!stack)
+        return ;
     new_node = malloc(sizeof(t_stack));
     if(!new_node)
         return ;
@@ -81,7 +77,6 @@ void append_node(t_stack **stack, int num)
         *stack = new_node;
         return ;
     }
-
     last_node = find_last(*stack);
     last_node->next = new_node;
     new_node->prev = last_node;

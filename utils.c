@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:49:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 16:32:30 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 14:08:46 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ t_stack *find_max(t_stack *stack)
 
 bool stack_sorted(t_stack *stack)
 {
+    if(!stack)
+        return false;
     while (stack->next != NULL)
     {
         if (stack->value > stack->next->value)
-        {
             return(false);
-        }
         stack = stack->next;
     }
     return(true);
@@ -76,17 +76,10 @@ void sort_three(t_stack **stack)
     t_stack* biggest_node;
 
     biggest_node = find_max(*stack);
-
     if (biggest_node == *stack)
-    {
         ra(stack);
-    }
     else if (biggest_node == (*stack)->next)
-    {
         rra(stack);
-    }
     if ((*stack)->value > (*stack)->next->value)
-    {
         sa(stack);
-    }
 }
