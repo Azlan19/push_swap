@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 15:45:31 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 16:11:55 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,30 @@ void current_index(t_stack *stack)
 
 static void set_target_a(t_stack *a, t_stack *b)
 {
-    
+    t_stack *current_b;
+    t_stack *target_node;
+    long best_position;
+
+    while(a)
+    {
+        best_position = LONG_MIN;
+        current_b = b;
+        while(current_b)
+        {
+            if (best_position < current_b->value && current_b->value < a->value)
+            {
+                best_position = current_b->value;
+                target_node = current_b;
+            }
+        }
+        if (best_position == LONG_MIN)
+        {
+            a->target_node = find_max(b);
+        }
+        else
+        {    
+            a->target_node = target_node;
+        }
+        a = a->next;
+    }
 }
