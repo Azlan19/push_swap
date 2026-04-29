@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 15:39:10 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 15:45:31 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,4 +77,9 @@ void current_index(t_stack *stack)
         stack = stack->next;
         i++;
     }
+}
+
+static void set_target_a(t_stack *a, t_stack *b)
+{
+    
 }
