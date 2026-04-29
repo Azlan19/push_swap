@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 10:13:31 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 13:03:39 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void rrb(t_stack **b);
 void rrr(t_stack **a, t_stack **b);
 
 //algorithm.c
+void push_swap(t_stack **a, t_stack **b);
 void push_a_to_b(t_stack **a, t_stack **b);
 
 #endif

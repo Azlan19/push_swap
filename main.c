@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 10:13:53 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 13:00:41 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int main(int argc, char **argv)
             display(a);
             display(b);
             printf("\n");
-            push_a_to_b(&a, &b);
+            push_swap(&a, &b);
         }
         
     }
