@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 14:13:04 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 15:31:48 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,6 @@ void rrr(t_stack **a, t_stack **b, bool print);
 //algorithm.c
 void push_swap(t_stack **a, t_stack **b);
 void push_a_to_b(t_stack **a, t_stack **b);
+void current_index(t_stack *stack);
 
 #endif

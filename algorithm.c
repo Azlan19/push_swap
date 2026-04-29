@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 14:15:41 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 15:39:10 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,21 @@
 
 void push_swap(t_stack **a, t_stack **b)
 {
-    if(stack_len(*a) > 3)
-        pb(a, b, true);
-    if(stack_len(*a) > 3)
-        pb(a, b, true);
-    while(stack_len(*a) > 3)
+    int len_a;
+
+    len_a = stack_len(*a);
+    if(len_a-- > 3 && !stack_sorted(*a))
+        pb(a, b, false);
+    if(len_a-- > 3 && !stack_sorted(*a))
+        pb(a, b, false);
+    while(len_a-- > 3)
     {
+        current_index(*a);
         push_a_to_b(a, b);
-        display(*a);
-        display(*b);
-        printf("\n");
     }
     sort_three(a);
-    while(stack_len(*b))
+    while(*b)
     {
-        printf("stack_len(a) = %d\n", stack_len(*b));
         pa(a, b, true);
         display(*a);
         display(*b);
@@ -49,7 +49,6 @@ void push_a_to_b(t_stack **a, t_stack **b)
     max_value = find_max(*b);
     if((*a)->value > max_value->value)
     {
-        printf("HERE\n");
         rrb(b, true);
         pb(a, b, true);
     }
@@ -57,5 +56,25 @@ void push_a_to_b(t_stack **a, t_stack **b)
     {
         pb(a, b, true);
     }
-    printf("max_value = %d\n", max_value->value);
+}
+
+void current_index(t_stack *stack)
+{
+    int i;
+    int median;
+
+    i = 0;
+    if (!stack)
+        return ;
+    median = stack_len(stack) / 2;
+    while(stack)
+    {
+        stack->index = i;
+        if (i <= median)
+            stack->above_median = true;
+        else
+            stack->above_median = false;
+        stack = stack->next;
+        i++;
+    }
 }
