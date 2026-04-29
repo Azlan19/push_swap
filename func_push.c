@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 18:30:36 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 14:53:50 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 14:11:09 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,16 @@ static void push(t_stack **src, t_stack **dest)
     *dest = node;
 }
 
-void pa(t_stack **a, t_stack **b)
+void pa(t_stack **a, t_stack **b, bool print)
 {
     push(b, a);
-    ft_printf("pa\n");
+    if(print)
+        ft_printf("pa\n");
 }
 
-void pb(t_stack **a, t_stack **b)
+void pb(t_stack **a, t_stack **b, bool print)
 {
     push(a, b);
-    ft_printf("pb\n");
+    if(print)
+        ft_printf("pb\n");
 }

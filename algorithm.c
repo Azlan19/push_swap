@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 13:27:58 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 14:15:41 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 void push_swap(t_stack **a, t_stack **b)
 {
     if(stack_len(*a) > 3)
-        pb(a, b);
+        pb(a, b, true);
     if(stack_len(*a) > 3)
-        pb(a, b);
+        pb(a, b, true);
     while(stack_len(*a) > 3)
     {
         push_a_to_b(a, b);
@@ -35,7 +35,7 @@ void push_swap(t_stack **a, t_stack **b)
     while(stack_len(*b))
     {
         printf("stack_len(a) = %d\n", stack_len(*b));
-        pa(a, b);
+        pa(a, b, true);
         display(*a);
         display(*b);
         printf("\n");
@@ -50,12 +50,12 @@ void push_a_to_b(t_stack **a, t_stack **b)
     if((*a)->value > max_value->value)
     {
         printf("HERE\n");
-        rrb(b);
-        pb(a, b);
+        rrb(b, true);
+        pb(a, b, true);
     }
     else
     {
-        pb(a, b);
+        pb(a, b, true);
     }
     printf("max_value = %d\n", max_value->value);
 }

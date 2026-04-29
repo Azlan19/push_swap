@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 11:26:00 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 14:54:24 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 14:13:44 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,24 @@ static void rotate(t_stack **stack)
     first->next = NULL;
 }
 
-void ra(t_stack **a)
+void ra(t_stack **a, bool print)
 {
     rotate(a);
-    ft_printf("ra\n");
+    if(print)
+        ft_printf("ra\n");
 }
 
-void rb(t_stack **b)
+void rb(t_stack **b, bool print)
 {
     rotate(b);
-    ft_printf("rb\n");
+    if(print)
+        ft_printf("rb\n");
 }
 
-void rr(t_stack **a, t_stack **b)
+void rr(t_stack **a, t_stack **b, bool print)
 {
     rotate(a);
     rotate(b);
-    ft_printf("rr\n");
+    if(print)
+        ft_printf("rr\n");
 }

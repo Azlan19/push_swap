@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:55:55 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/28 14:54:35 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 14:13:52 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,24 @@ static void swap(t_stack **stack)
     
 }
 
-void sa(t_stack **a)
+void sa(t_stack **a, bool print)
 {
     swap(a);
-    ft_printf("sa\n");
+    if(print)
+        ft_printf("sa\n");
 }
 
-void sb(t_stack **b)
+void sb(t_stack **b, bool print)
 {
     swap(b);
-    ft_printf("sb\n");
+    if(print)
+        ft_printf("sb\n");
 }
 
-void ss(t_stack **a, t_stack **b)
+void ss(t_stack **a, t_stack **b, bool print)
 {
     swap(a);
     swap(b);
-    ft_printf("ss\n");
+    if(print)
+        ft_printf("ss\n");
 }

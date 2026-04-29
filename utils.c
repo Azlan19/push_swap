@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:49:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 14:08:46 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 14:14:43 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,9 @@ void sort_three(t_stack **stack)
 
     biggest_node = find_max(*stack);
     if (biggest_node == *stack)
-        ra(stack);
+        ra(stack, true);
     else if (biggest_node == (*stack)->next)
-        rra(stack);
+        rra(stack, true);
     if ((*stack)->value > (*stack)->next->value)
-        sa(stack);
+        sa(stack, true);
 }

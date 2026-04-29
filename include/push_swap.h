@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 13:03:39 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 14:13:04 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,20 +60,20 @@ long ft_atol(const char *str);
 void append_node(t_stack **stack, int num);
 
 //func_*.c
-void sa(t_stack **a);
-void sb(t_stack **b);
-void ss(t_stack **a, t_stack **b);
+void sa(t_stack **a, bool print);
+void sb(t_stack **b, bool print);
+void ss(t_stack **a, t_stack **b, bool print);
 
-void pa(t_stack **a, t_stack **b);
-void pb(t_stack **a, t_stack **b);
+void pa(t_stack **a, t_stack **b, bool print);
+void pb(t_stack **a, t_stack **b, bool print);
 
-void ra(t_stack **a);
-void rb(t_stack **b);
-void rr(t_stack **a, t_stack **b);
+void ra(t_stack **a, bool print);
+void rb(t_stack **b, bool print);
+void rr(t_stack **a, t_stack **b, bool print);
 
-void rra(t_stack **a);
-void rrb(t_stack **b);
-void rrr(t_stack **a, t_stack **b);
+void rra(t_stack **a, bool print);
+void rrb(t_stack **b, bool print);
+void rrr(t_stack **a, t_stack **b, bool print);
 
 //algorithm.c
 void push_swap(t_stack **a, t_stack **b);

@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 13:58:31 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/04/29 14:14:11 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main(int argc, char **argv)
     if(!stack_sorted(a))
     {
         if (stack_len(a) == 2)
-            sa(&a);
+            sa(&a, true);
         if (stack_len(a) == 3)
             sort_three(&a);
         else
