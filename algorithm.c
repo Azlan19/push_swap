@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/02 20:11:29 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/02 20:23:26 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,16 +133,29 @@ void rotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node)
     current_index(*b);
 }
 
+void rev_rotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node)
+{
+    while (*b != cheapest_node->target_node && *a != cheapest_node)
+    {
+        rrr(a, b, false);
+    }
+    current_index(*a);
+    current_index(*b);
+}
+
 void push_a_to_b(t_stack **a, t_stack **b)
 {
     t_stack *cheapest_node;
     
-    cheapest_node = find_cheapest(*a);
-    if (cheapest_node->above_median ** cheapest_node->target_node->above_median)
+    cheapest_node = get_cheapest(*a);
+    if (cheapest_node->above_median && cheapest_node->target_node->above_median)
     {
-        rr(a, b);
+        rotate_both(a, b, cheapest_node);
     }
-    else if ()
+    else if (!(cheapest_node->above_median && cheapest_node->target_node->above_median))
+    {
+        rev_rotate_both(a, b, cheapest_node);
+    }
 }
 
 void push_swap(t_stack **a, t_stack **b)
@@ -161,7 +174,13 @@ void push_swap(t_stack **a, t_stack **b)
         set_target_a(*a, *b);
         cost_calculator_a(*a, *b);
         find_cheapest(*a);
+        display(*a);
+        display(*b);
+        printf("\n");
         push_a_to_b(a, b);
+        display(*a);
+        display(*b);
+        printf("- - - - - - - - - - \n");
     }
     sort_three(a);
     while(*b)

@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 14:14:11 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/02 13:25:33 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,10 @@ int main(int argc, char **argv)
         if (stack_len(a) == 3)
             sort_three(&a);
         else
+        {
             push_swap(&a, &b);   
+        }
+            
     }   
     display(a);
     display(b);
