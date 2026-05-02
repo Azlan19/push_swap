@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/02 20:04:18 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/02 20:11:29 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,19 +123,26 @@ void find_cheapest(t_stack *stack)
     cheapest_node->cheapest = true;
 }
 
+void rotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node)
+{
+    while (*b != cheapest_node->target_node && *a != cheapest_node)
+    {
+        rr(a, b, false);
+    }
+    current_index(*a);
+    current_index(*b);
+}
+
 void push_a_to_b(t_stack **a, t_stack **b)
 {
-    t_stack* max_value;
-    max_value = find_max(*b);
-    if((*a)->value > max_value->value)
+    t_stack *cheapest_node;
+    
+    cheapest_node = find_cheapest(*a);
+    if (cheapest_node->above_median ** cheapest_node->target_node->above_median)
     {
-        rrb(b, true);
-        pb(a, b, true);
+        rr(a, b);
     }
-    else
-    {
-        pb(a, b, true);
-    }
+    else if ()
 }
 
 void push_swap(t_stack **a, t_stack **b)
