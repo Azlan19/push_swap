@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 16:11:55 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/02 13:39:01 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,6 @@
 //      - push nodes from 'b' to 'a' by choosing the cheapest option
 //      - Make sure the smallest node in a is at the front/top of the list
 
-void push_swap(t_stack **a, t_stack **b)
-{
-    int len_a;
-
-    len_a = stack_len(*a);
-    if(len_a-- > 3 && !stack_sorted(*a))
-        pb(a, b, false);
-    if(len_a-- > 3 && !stack_sorted(*a))
-        pb(a, b, false);
-    while(len_a-- > 3)
-    {
-        current_index(*a);
-        push_a_to_b(a, b);
-    }
-    sort_three(a);
-    while(*b)
-    {
-        pa(a, b, true);
-        display(*a);
-        display(*b);
-        printf("\n");
-    }
-    
-}
 
 void push_a_to_b(t_stack **a, t_stack **b)
 {
@@ -62,21 +38,25 @@ void current_index(t_stack *stack)
 {
     int i;
     int median;
-
+    
     i = 0;
     if (!stack)
-        return ;
+    return ;
     median = stack_len(stack) / 2;
     while(stack)
     {
         stack->index = i;
         if (i <= median)
+        {
             stack->above_median = true;
-        else
-            stack->above_median = false;
-        stack = stack->next;
-        i++;
+        }
+    else
+    {
+        stack->above_median = false;
     }
+    stack = stack->next;
+    i++;
+}
 }
 
 static void set_target_a(t_stack *a, t_stack *b)
@@ -84,7 +64,7 @@ static void set_target_a(t_stack *a, t_stack *b)
     t_stack *current_b;
     t_stack *target_node;
     long best_position;
-
+    
     while(a)
     {
         best_position = LONG_MIN;
@@ -96,6 +76,7 @@ static void set_target_a(t_stack *a, t_stack *b)
                 best_position = current_b->value;
                 target_node = current_b;
             }
+            current_b = current_b->next;
         }
         if (best_position == LONG_MIN)
         {
@@ -107,4 +88,30 @@ static void set_target_a(t_stack *a, t_stack *b)
         }
         a = a->next;
     }
+}
+
+void push_swap(t_stack **a, t_stack **b)
+{
+    int len_a;
+
+    len_a = stack_len(*a);
+    if(len_a-- > 3 && !stack_sorted(*a))
+        pb(a, b, false);
+    if(len_a-- > 3 && !stack_sorted(*a))
+        pb(a, b, false);
+    while(len_a-- > 3)
+    {
+        current_index(*a);
+        set_target_a(*a, *b);
+        push_a_to_b(a, b);
+    }
+    sort_three(a);
+    while(*b)
+    {
+        pa(a, b, true);
+        display(*a);
+        display(*b);
+        printf("\n");
+    }
+    
 }
