@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/02 13:39:01 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/02 19:20:36 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,37 @@ static void set_target_a(t_stack *a, t_stack *b)
     }
 }
 
+static void cost_calculator_a(t_stack *a, t_stack *b)
+{
+    int len_a;
+    int len_b;
+    
+    len_a = stack_len(a);
+    len_b = stack_len(b);
+    while(a)
+    {
+        a->push_cost = a->index;
+        if(!(a->above_median))
+        {
+            a->push_cost = len_a - a->index;
+        }
+        if(a->target_node->above_median)
+        {
+            a->push_cost += a->target_node->index;
+        }
+        else
+        {
+            a->push_cost += len_b - a->target_node->index;
+        }
+        
+        a = a->next;
+    }
+    
+}
+
+
+
+
 void push_swap(t_stack **a, t_stack **b)
 {
     int len_a;
@@ -103,6 +134,7 @@ void push_swap(t_stack **a, t_stack **b)
     {
         current_index(*a);
         set_target_a(*a, *b);
+        cost_calculator_a(*a, *b);
         push_a_to_b(a, b);
     }
     sort_three(a);
