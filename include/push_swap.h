@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/03 11:00:45 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/03 11:15:32 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ char	**ft_split(char const *s, char c);
 t_stack *find_last(t_stack *stack);
 int stack_len(t_stack *stack);
 t_stack *find_max(t_stack *stack);
+t_stack *find_min(t_stack *stack);
 bool stack_sorted(t_stack *stack);
 void sort_three(t_stack **stack);
 
@@ -81,6 +82,7 @@ void revrotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node);
 //algorithm.c
 void push_a_to_b(t_stack **a, t_stack **b);
 void	prep_for_push(t_stack **stack, t_stack *top_node, char stack_name);
+void push_b_to_a(t_stack **a, t_stack **b);
 
 //push_swap.c
 void push_swap(t_stack **a, t_stack **b);
@@ -88,6 +90,8 @@ void push_swap(t_stack **a, t_stack **b);
 //prep_a_to_b.c
 void current_index(t_stack *stack);
 void find_cheapest(t_stack *stack);
-void prep_nodes(t_stack *a, t_stack *b);
+void prep_nodes_a(t_stack *a, t_stack *b);
 
+//prep_b_to_a.c
+void prep_nodes_b(t_stack *a, t_stack *b);
 #endif

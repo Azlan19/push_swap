@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:49:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 14:14:43 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/03 11:10:35 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,21 @@ t_stack *find_max(t_stack *stack)
         stack = stack->next;
     }
     return max;
+}
+
+t_stack *find_min(t_stack *stack)
+{
+    t_stack* min;
+    min = stack;
+    while (stack->next)
+    {
+        if(min->value > stack->next->value)
+        {
+            min = stack->next;
+        }
+        stack = stack->next;
+    }
+    return min;
 }
 
 bool stack_sorted(t_stack *stack)

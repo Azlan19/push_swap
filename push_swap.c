@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 10:43:26 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/03 10:44:45 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/03 11:17:22 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void push_swap(t_stack **a, t_stack **b)
         pb(a, b, false);
     while(len_a-- > 3)
     {
-        prep_nodes(*a, *b);
+        prep_nodes_a(*a, *b);
         display(*a);
         display(*b);
         printf("\n");
@@ -35,7 +35,11 @@ void push_swap(t_stack **a, t_stack **b)
     sort_three(a);
     while(*b)
     {
-        pa(a, b, true);
+        prep_nodes_b(*a, *b);
+        display(*a);
+        display(*b);
+        printf("\n");
+        push_b_to_a(a, b);
         display(*a);
         display(*b);
         printf("\n");

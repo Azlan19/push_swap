@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/03 10:59:54 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/03 11:16:13 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,11 @@ void push_a_to_b(t_stack **a, t_stack **b)
     prep_for_push(a, cheapest_node, 'a');
     prep_for_push(b, cheapest_node->target_node, 'b');
     pb(a, b, false);
+}
+
+void push_b_to_a(t_stack **a, t_stack **b)
+{
+    prep_for_push(a, (*b)->target_node, 'a');
+    pa(a, b, false);
 }
 

@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 10:51:16 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/03 11:00:00 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/03 11:13:04 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ void find_cheapest(t_stack *stack)
 }
 
 
-void prep_nodes(t_stack *a, t_stack *b)
+void prep_nodes_a(t_stack *a, t_stack *b)
 {
     current_index(a);
     current_index(b);
