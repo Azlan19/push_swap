@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/03 11:15:32 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/03 12:07:00 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int stack_len(t_stack *stack);
 t_stack *find_max(t_stack *stack);
 t_stack *find_min(t_stack *stack);
 bool stack_sorted(t_stack *stack);
+
+//sort_three.c
 void sort_three(t_stack **stack);
 
 //error.c
