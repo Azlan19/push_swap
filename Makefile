@@ -20,6 +20,7 @@ SRCS		= 	main.c				\
 				error.c 			\
 				algorithm.c 		\
 				push_swap.c 		\
+				prep_a_to_b.c 		\
 
 OBJS_DIR	= obj
 OBJS		= $(SRCS:%.c=$(OBJS_DIR)/%.o)
