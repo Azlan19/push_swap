@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 17:17:50 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/02 20:23:26 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/03 10:31:47 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,6 +143,27 @@ void rev_rotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node)
     current_index(*b);
 }
 
+void	prep_for_push(t_stack **stack, t_stack *top_node, char stack_name)
+{
+while (*stack != top_node)
+{
+    if (stack_name == 'a')
+    {
+        if (top_node->above_median)
+            ra(stack, false);
+        else
+            rra(stack, false);
+        }
+    else if (stack_name == 'b')
+    {
+        if (top_node->above_median)
+            rb(stack, false);
+        else
+            rrb(stack, false);
+    }	
+    }
+}
+
 void push_a_to_b(t_stack **a, t_stack **b)
 {
     t_stack *cheapest_node;
@@ -152,10 +173,22 @@ void push_a_to_b(t_stack **a, t_stack **b)
     {
         rotate_both(a, b, cheapest_node);
     }
-    else if (!(cheapest_node->above_median && cheapest_node->target_node->above_median))
+    else if (!(cheapest_node->above_median) && !(cheapest_node->target_node->above_median))
     {
         rev_rotate_both(a, b, cheapest_node);
     }
+    prep_for_push(a, cheapest_node, 'a');
+    prep_for_push(b, cheapest_node->target_node, 'b');
+    pb(a, b, false);
+}
+
+void prep_nodes(t_stack *a, t_stack *b)
+{
+    current_index(a);
+    current_index(b);
+    set_target_a(a, b);
+    cost_calculator_a(a, b);
+    find_cheapest(a);
 }
 
 void push_swap(t_stack **a, t_stack **b)
@@ -169,11 +202,7 @@ void push_swap(t_stack **a, t_stack **b)
         pb(a, b, false);
     while(len_a-- > 3)
     {
-        current_index(*a);
-        current_index(*b);
-        set_target_a(*a, *b);
-        cost_calculator_a(*a, *b);
-        find_cheapest(*a);
+        prep_nodes(*a, *b);
         display(*a);
         display(*b);
         printf("\n");
