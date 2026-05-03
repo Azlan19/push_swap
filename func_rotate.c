@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 11:26:00 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/29 14:13:44 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/03 10:47:27 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,14 @@ void rr(t_stack **a, t_stack **b, bool print)
     rotate(b);
     if(print)
         ft_printf("rr\n");
+}
+
+void rotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node)
+{
+    while (*b != cheapest_node->target_node && *a != cheapest_node)
+    {
+        rr(a, b, false);
+    }
+    current_index(*a);
+    current_index(*b);
 }
