@@ -22,6 +22,7 @@ SRCS		= 	main.c				\
 				push_swap.c 		\
 				prep_a_to_b.c 		\
 				prep_b_to_a.c 		\
+				sort_three.c 		\
 
 OBJS_DIR	= obj
 OBJS		= $(SRCS:%.c=$(OBJS_DIR)/%.o)
