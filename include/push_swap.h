@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/03 10:30:46 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/03 10:45:30 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ void rrb(t_stack **b, bool print);
 void rrr(t_stack **a, t_stack **b, bool print);
 
 //algorithm.c
-void push_swap(t_stack **a, t_stack **b);
 void push_a_to_b(t_stack **a, t_stack **b);
 void current_index(t_stack *stack);
 void find_cheapest(t_stack *stack);
@@ -85,6 +84,9 @@ void rotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node);
 void rev_rotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node);
 void	prep_for_push(t_stack **stack, t_stack *top_node, char stack_name);
 void prep_nodes(t_stack *a, t_stack *b);
+
+//push_swap.c
+void push_swap(t_stack **a, t_stack **b);
 
 
 
