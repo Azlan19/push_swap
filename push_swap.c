@@ -6,11 +6,25 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 10:43:26 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/03 11:17:22 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/03 11:22:15 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
+
+static void	min_on_top(t_stack **a)
+{
+    long min_value;
+
+    min_value = find_min(*a)->value;
+	while ((*a)->value != min_value)
+	{
+		if (find_min(*a)->above_median)
+			ra(a, false);
+		else
+			rra(a, false);
+	}
+}
 
 void push_swap(t_stack **a, t_stack **b)
 {
@@ -43,5 +57,7 @@ void push_swap(t_stack **a, t_stack **b)
         display(*a);
         display(*b);
         printf("\n");
-    }    
+    }
+    current_index(*a);
+    min_on_top(a);
 }
