@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 10:51:16 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 14:03:19 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 18:29:53 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,10 @@ void	find_cheapest(t_stack *stack)
 	if (!stack)
 		return ;
 	cheapest_value = LONG_MAX;
+	cheapest_node = NULL;
 	while (stack)
 	{
+		stack->cheapest = false;
 		if (stack->push_cost < cheapest_value)
 		{
 			cheapest_value = stack->push_cost;
@@ -97,7 +99,8 @@ void	find_cheapest(t_stack *stack)
 		}
 		stack = stack->next;
 	}
-	cheapest_node->cheapest = true;
+	if (cheapest_node)
+		cheapest_node->cheapest = true;
 }
 
 void	prep_nodes_a(t_stack *a, t_stack *b)

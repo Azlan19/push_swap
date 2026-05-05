@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:44:52 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 13:54:42 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 17:52:07 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ static void	*ft_calloc(size_t nmemb, size_t size)
 	return (ptr);
 }
 
-static int	count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
-	int	i;
-	int	counter;
+	size_t	i;
+	size_t	counter;
 
 	counter = 0;
 	i = 0;
@@ -72,9 +72,9 @@ static void	*free_everything(char **double_ptr, size_t words)
 	return (NULL);
 }
 
-static char	*allocate_ptr(char const *s, int j)
+static char	*allocate_ptr(char const *s, size_t j)
 {
-	int		n;
+	size_t		n;
 	char	*ptr;
 
 	ptr = (char *)ft_calloc(j + 1, sizeof(char));
@@ -116,6 +116,7 @@ char	**ft_split(char const *s, char c)
 		s = s + j;
 		i++;
 	}
+	double_ptr[i] = NULL;
 	return (double_ptr);
 }
 

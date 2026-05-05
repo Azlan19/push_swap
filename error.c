@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 19:21:58 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 13:54:33 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 17:44:13 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	free_stack(t_stack **stack)
 	t_stack	*tmp;
 	t_stack	*current;
 
-	if (NULL == stack)
+	if (!stack)
 		return ;
 	current = *stack;
 	while (current)

@@ -6,24 +6,24 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 14:49:59 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 18:38:03 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
 
-// void	display(t_stack *head)
-// {
-// 	t_stack	*current;
+void	display(t_stack *head)
+{
+	t_stack	*current;
 
-// 	current = head;
-// 	while (current != NULL)
-// 	{
-// 		printf("%d -> ", current->value);
-// 		current = current->next;
-// 	}
-// 	printf("NULL\n");
-// }
+	current = head;
+	while (current != NULL)
+	{
+		printf("%d -> ", current->value);
+		current = current->next;
+	}
+	printf("NULL\n");
+}
 
 int	main(int argc, char **argv)
 {
@@ -38,10 +38,14 @@ int	main(int argc, char **argv)
 	{
 		argv = ft_split(argv[1], ' ');
 		create_stack(&a, argv, true);
+        free_argv(argv);
 	}
 	else
 		create_stack(&a, argv + 1, false);
-	if (!stack_sorted(a))
+    display(a);
+    display(b);
+    printf("\n");
+    if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)
 			sa(&a, true);
@@ -50,6 +54,9 @@ int	main(int argc, char **argv)
 		else
 			push_swap(&a, &b);
 	}
-	free(a);
+    display(a);
+    display(b);
+    printf("\n");
+	free_stack(&a);
 	return (0);
 }

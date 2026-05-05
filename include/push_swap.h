@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 14:50:05 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 17:21:11 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <limits.h>
 # include <stdbool.h>
 # include <stdlib.h>
-// # include <stdio.h>
+# include <stdio.h>
 
 typedef struct s_stack
 {
@@ -33,7 +33,7 @@ typedef struct s_stack
 }					t_stack;
 
 // Temporary
-// void				display(t_stack *head);
+void				display(t_stack *head);
 //--------------------------------
 
 // ft_split.c

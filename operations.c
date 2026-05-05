@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 11:22:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 13:55:24 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 17:45:30 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,19 @@ void	create_stack(t_stack **a, char **argv, bool is_string)
 	while (argv[i])
 	{
 		if (!error_syntax(argv[i]))
+		{
 			fail_free(a, argv, is_string);
+		}
 		num = ft_atol(argv[i]);
 		if (num < INT_MIN || INT_MAX < num)
+		{
 			fail_free(a, argv, is_string);
+		}
 		if (!error_duplicate(*a, (int)num))
+		{
 			fail_free(a, argv, is_string);
-		append_node(a, num);
+		}
+		append_node(a, (int)num);
 		i++;
 	}
 }
