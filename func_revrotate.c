@@ -6,63 +6,56 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 14:41:02 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/03 10:47:09 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 13:54:58 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "include/push_swap.h"
+#include "include/push_swap.h"
 
-static void revrotate(t_stack **stack)
+static void	revrotate(t_stack **stack)
 {
-    t_stack* first;
-    t_stack* last;
+	t_stack	*first;
+	t_stack	*last;
 
-    if (!stack || !*stack || !(*stack)->next)
-    return ;
-
-    first = *stack;
-    last = find_last(first);
-
-    last->next = first;
-    first->prev = last;
-
-    last->prev->next = NULL;
-    last->prev = NULL;
-
-    *stack = last;
-
-
-    
+	if (!stack || !*stack || !(*stack)->next)
+		return ;
+	first = *stack;
+	last = find_last(first);
+	last->next = first;
+	first->prev = last;
+	last->prev->next = NULL;
+	last->prev = NULL;
+	*stack = last;
 }
 
-void rra(t_stack **a, bool print)
+void	rra(t_stack **a, bool print)
 {
-    revrotate(a);
-    if(print)
-        ft_printf("rra\n");
+	revrotate(a);
+	if (print)
+		ft_printf("rra\n");
 }
 
-void rrb(t_stack **b, bool print)
+void	rrb(t_stack **b, bool print)
 {
-    revrotate(b);
-    if(print)
-        ft_printf("rrb\n");
+	revrotate(b);
+	if (print)
+		ft_printf("rrb\n");
 }
 
-void rrr(t_stack **a, t_stack **b, bool print)
+void	rrr(t_stack **a, t_stack **b, bool print)
 {
-    revrotate(a);
-    revrotate(b);
-    if(print)
-        ft_printf("rrr\n");
+	revrotate(a);
+	revrotate(b);
+	if (print)
+		ft_printf("rrr\n");
 }
 
-void revrotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node)
+void	revrotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node)
 {
-    while (*b != cheapest_node->target_node && *a != cheapest_node)
-    {
-        rrr(a, b, false);
-    }
-    current_index(*a);
-    current_index(*b);
+	while (*b != cheapest_node->target_node && *a != cheapest_node)
+	{
+		rrr(a, b, false);
+	}
+	current_index(*a);
+	current_index(*b);
 }

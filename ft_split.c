@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:44:52 by oazlan            #+#    #+#             */
-/*   Updated: 2026/04/22 12:57:33 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 13:54:42 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ RETURN VALUE
 	NULL if the allocation fails.
 */
 
-
-# include "include/push_swap.h"
+#include "include/push_swap.h"
 
 static void	*ft_calloc(size_t nmemb, size_t size)
 {
