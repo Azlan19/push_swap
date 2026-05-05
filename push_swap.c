@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 10:43:26 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/03 11:22:15 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 12:48:08 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,25 +38,13 @@ void push_swap(t_stack **a, t_stack **b)
     while(len_a-- > 3)
     {
         prep_nodes_a(*a, *b);
-        display(*a);
-        display(*b);
-        printf("\n");
         push_a_to_b(a, b);
-        display(*a);
-        display(*b);
-        printf("- - - - - - - - - - \n");
     }
     sort_three(a);
     while(*b)
     {
         prep_nodes_b(*a, *b);
-        display(*a);
-        display(*b);
-        printf("\n");
         push_b_to_a(a, b);
-        display(*a);
-        display(*b);
-        printf("\n");
     }
     current_index(*a);
     min_on_top(a);
