@@ -6,24 +6,24 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 14:46:34 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 13:55:10 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 14:07:06 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
 
-void	display(t_stack *head)
-{
-	t_stack	*current;
+// void	display(t_stack *head)
+// {
+// 	t_stack	*current;
 
-	current = head;
-	while (current != NULL)
-	{
-		printf("%d -> ", current->value);
-		current = current->next;
-	}
-	printf("NULL\n");
-}
+// 	current = head;
+// 	while (current != NULL)
+// 	{
+// 		printf("%d -> ", current->value);
+// 		current = current->next;
+// 	}
+// 	printf("NULL\n");
+// }
 
 int	main(int argc, char **argv)
 {
