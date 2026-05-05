@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 10:43:26 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 13:55:33 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 14:03:40 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ static void	min_on_top(t_stack **a)
 	while ((*a)->value != min_value)
 	{
 		if (find_min(*a)->above_median)
-			ra(a, false);
+			ra(a, true);
 		else
-			rra(a, false);
+			rra(a, true);
 	}
 }
 
@@ -32,9 +32,9 @@ void	push_swap(t_stack **a, t_stack **b)
 
 	len_a = stack_len(*a);
 	if (len_a-- > 3 && !stack_sorted(*a))
-		pb(a, b, false);
+		pb(a, b, true);
 	if (len_a-- > 3 && !stack_sorted(*a))
-		pb(a, b, false);
+		pb(a, b, true);
 	while (len_a-- > 3)
 	{
 		prep_nodes_a(*a, *b);

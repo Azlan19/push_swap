@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 10:51:16 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 13:56:24 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/05 14:03:19 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,9 @@ void	current_index(t_stack *stack)
 	{
 		stack->index = i;
 		if (i <= median)
-		{
 			stack->above_median = true;
-		}
 		else
-		{
 			stack->above_median = false;
-		}
 		stack = stack->next;
 		i++;
 	}
@@ -75,17 +71,11 @@ static void	cost_calculator_a(t_stack *a, t_stack *b)
 	{
 		a->push_cost = a->index;
 		if (!(a->above_median))
-		{
 			a->push_cost = len_a - a->index;
-		}
 		if (a->target_node->above_median)
-		{
 			a->push_cost += a->target_node->index;
-		}
 		else
-		{
 			a->push_cost += len_b - a->target_node->index;
-		}
 		a = a->next;
 	}
 }
@@ -96,9 +86,7 @@ void	find_cheapest(t_stack *stack)
 	t_stack	*cheapest_node;
 
 	if (!stack)
-	{
 		return ;
-	}
 	cheapest_value = LONG_MAX;
 	while (stack)
 	{
