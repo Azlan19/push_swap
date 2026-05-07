@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 16:44:52 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 17:52:07 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/07 22:22:12 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static void	*free_everything(char **double_ptr, size_t words)
 
 static char	*allocate_ptr(char const *s, size_t j)
 {
-	size_t		n;
+	size_t	n;
 	char	*ptr;
 
 	ptr = (char *)ft_calloc(j + 1, sizeof(char));
