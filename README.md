@@ -42,6 +42,17 @@ make re
     ./push_swap "3 2 1 5 9"  
     ```  
 The program prints the list of operations, separated by `'\n'`, needed to sort the input.
+- Example Output:  
+    ```bash
+    pb
+    pb
+    ra
+    pa
+    ra
+    pa
+    rra
+    rra  
+    ```  
 
 
 ### Operations List
