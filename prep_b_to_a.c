@@ -6,13 +6,13 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/03 11:04:53 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 13:57:02 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/08 15:07:24 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
 
-void	set_target_b(t_stack *a, t_stack *b)
+static void	set_target_b(t_stack *a, t_stack *b)
 {
 	t_stack	*current_a;
 	t_stack	*target_node;
