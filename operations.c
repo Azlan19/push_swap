@@ -6,13 +6,13 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 11:22:57 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/05 17:45:30 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/08 11:37:41 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
 
-long	ft_atol(const char *str)
+static long	ft_atol(const char *str)
 {
 	long	num;
 	int		sign;
@@ -38,33 +38,7 @@ long	ft_atol(const char *str)
 	return (num * sign);
 }
 
-void	create_stack(t_stack **a, char **argv, bool is_string)
-{
-	int		i;
-	long	num;
-
-	i = 0;
-	while (argv[i])
-	{
-		if (!error_syntax(argv[i]))
-		{
-			fail_free(a, argv, is_string);
-		}
-		num = ft_atol(argv[i]);
-		if (num < INT_MIN || INT_MAX < num)
-		{
-			fail_free(a, argv, is_string);
-		}
-		if (!error_duplicate(*a, (int)num))
-		{
-			fail_free(a, argv, is_string);
-		}
-		append_node(a, (int)num);
-		i++;
-	}
-}
-
-void	append_node(t_stack **stack, int num)
+static void	append_node(t_stack **stack, int num)
 {
 	t_stack	*new_node;
 	t_stack	*last_node;
@@ -84,6 +58,26 @@ void	append_node(t_stack **stack, int num)
 	last_node = find_last(*stack);
 	last_node->next = new_node;
 	new_node->prev = last_node;
+}
+
+void	create_stack(t_stack **a, char **argv, bool is_string)
+{
+	int		i;
+	long	num;
+
+	i = 0;
+	while (argv[i])
+	{
+		if (!error_syntax(argv[i]))
+			fail_free(a, argv, is_string);
+		num = ft_atol(argv[i]);
+		if (num < INT_MIN || INT_MAX < num)
+			fail_free(a, argv, is_string);
+		if (!error_duplicate(*a, (int)num))
+			fail_free(a, argv, is_string);
+		append_node(a, (int)num);
+		i++;
+	}
 }
 
 t_stack	*get_cheapest(t_stack *stack)

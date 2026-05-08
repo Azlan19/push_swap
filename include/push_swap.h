@@ -6,7 +6,7 @@
 /*   By: oazlan <oazlan@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:37:25 by oazlan            #+#    #+#             */
-/*   Updated: 2026/05/08 11:15:42 by oazlan           ###   ########.fr       */
+/*   Updated: 2026/05/08 11:33:35 by oazlan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ bool				error_duplicate(t_stack *stack, int num);
 
 // operations.c
 void				create_stack(t_stack **a, char **argv, bool is_string);
-long				ft_atol(const char *str);
-void				append_node(t_stack **stack, int num);
 t_stack				*get_cheapest(t_stack *stack);
 
 // func_*.c
