@@ -62,6 +62,7 @@ The program prints `Error` when an input contains:
 - 42 School Subject PDF 
 - [Algorithm Explanation Article](https://medium.com/@ayogun/push-swap-c1f5d2d41e97)
 - [YouTube Tutorial](https://www.youtube.com/watch?v=wRvipSG4Mmk)
+- [Algorithm Visualizer](https://push.eliotlucas.ch/)
 
 
 ---
